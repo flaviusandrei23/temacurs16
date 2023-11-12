@@ -33,3 +33,24 @@ def stergere_angajat():
 
 if __name__ == "__main__":
     stergere_angajat()
+    
+
+import csv
+
+def lista_angajati():
+    with open("angajati.csv", "r") as file:
+        reader = csv.reader(file)
+        angajati = list(reader)
+
+    if angajati:
+        print("Lista angajati: ")
+        for angajat in angajati:
+            print(f"Nume: {angajat[0]}, Prenume: {angajat[1]}, Salariu: {angajat}[2]")
+
+
+if __name__ == "__main__":
+    lista_angajati()
+
+
+    
+
